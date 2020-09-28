@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		719DD581252270D7007195C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DD580252270D7007195C1 /* AppDelegate.swift */; };
 		719DD583252270D7007195C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DD582252270D7007195C1 /* SceneDelegate.swift */; };
-		719DD585252270D7007195C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DD584252270D7007195C1 /* ViewController.swift */; };
 		719DD588252270D7007195C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 719DD586252270D7007195C1 /* Main.storyboard */; };
 		719DD58A252270DA007195C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 719DD589252270DA007195C1 /* Assets.xcassets */; };
 		719DD58D252270DA007195C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 719DD58B252270DA007195C1 /* LaunchScreen.storyboard */; };
@@ -23,7 +22,6 @@
 		719DD57D252270D7007195C1 /* EventsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		719DD580252270D7007195C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		719DD582252270D7007195C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		719DD584252270D7007195C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		719DD587252270D7007195C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		719DD589252270DA007195C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		719DD58C252270DA007195C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,19 +62,42 @@
 		719DD57F252270D7007195C1 /* EventsApp */ = {
 			isa = PBXGroup;
 			children = (
+				719DD59E2522791E007195C1 /* Coordinators */,
+				719DD59D25227904007195C1 /* Controllers */,
+				719DD59C252278F0007195C1 /* Extensions */,
 				719DD580252270D7007195C1 /* AppDelegate.swift */,
 				719DD582252270D7007195C1 /* SceneDelegate.swift */,
-				719DD584252270D7007195C1 /* ViewController.swift */,
 				719DD586252270D7007195C1 /* Main.storyboard */,
 				719DD589252270DA007195C1 /* Assets.xcassets */,
 				719DD58B252270DA007195C1 /* LaunchScreen.storyboard */,
 				719DD58E252270DA007195C1 /* Info.plist */,
-				719DD59425227125007195C1 /* AppCoordinator.swift */,
-				719DD596252273D1007195C1 /* EventListCoordinator.swift */,
-				719DD5982522745C007195C1 /* EventListViewController.swift */,
-				719DD59A25227782007195C1 /* UIColor+Extension.swift */,
 			);
 			path = EventsApp;
+			sourceTree = "<group>";
+		};
+		719DD59C252278F0007195C1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				719DD59A25227782007195C1 /* UIColor+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		719DD59D25227904007195C1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				719DD5982522745C007195C1 /* EventListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		719DD59E2522791E007195C1 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				719DD59425227125007195C1 /* AppCoordinator.swift */,
+				719DD596252273D1007195C1 /* EventListCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,7 +174,6 @@
 				719DD59B25227782007195C1 /* UIColor+Extension.swift in Sources */,
 				719DD59525227125007195C1 /* AppCoordinator.swift in Sources */,
 				719DD5992522745C007195C1 /* EventListViewController.swift in Sources */,
-				719DD585252270D7007195C1 /* ViewController.swift in Sources */,
 				719DD581252270D7007195C1 /* AppDelegate.swift in Sources */,
 				719DD583252270D7007195C1 /* SceneDelegate.swift in Sources */,
 				719DD597252273D1007195C1 /* EventListCoordinator.swift in Sources */,
