@@ -9,10 +9,9 @@
 import UIKit
 
 final class EventListViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.setupViews()
     }
     
