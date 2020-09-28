@@ -16,6 +16,7 @@
 		719DD59525227125007195C1 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DD59425227125007195C1 /* AppCoordinator.swift */; };
 		719DD597252273D1007195C1 /* EventListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DD596252273D1007195C1 /* EventListCoordinator.swift */; };
 		719DD5992522745C007195C1 /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DD5982522745C007195C1 /* EventListViewController.swift */; };
+		719DD59B25227782007195C1 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DD59A25227782007195C1 /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		719DD59425227125007195C1 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		719DD596252273D1007195C1 /* EventListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListCoordinator.swift; sourceTree = "<group>"; };
 		719DD5982522745C007195C1 /* EventListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
+		719DD59A25227782007195C1 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				719DD59425227125007195C1 /* AppCoordinator.swift */,
 				719DD596252273D1007195C1 /* EventListCoordinator.swift */,
 				719DD5982522745C007195C1 /* EventListViewController.swift */,
+				719DD59A25227782007195C1 /* UIColor+Extension.swift */,
 			);
 			path = EventsApp;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				719DD59B25227782007195C1 /* UIColor+Extension.swift in Sources */,
 				719DD59525227125007195C1 /* AppCoordinator.swift in Sources */,
 				719DD5992522745C007195C1 /* EventListViewController.swift in Sources */,
 				719DD585252270D7007195C1 /* ViewController.swift in Sources */,
