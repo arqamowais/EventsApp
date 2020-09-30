@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		715C602425251537007DDCA5 /* EventListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715C602325251537007DDCA5 /* EventListViewModel.swift */; };
+		715C602625251625007DDCA5 /* AddEventCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715C602525251625007DDCA5 /* AddEventCoordinator.swift */; };
 		719DD581252270D7007195C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DD580252270D7007195C1 /* AppDelegate.swift */; };
 		719DD583252270D7007195C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DD582252270D7007195C1 /* SceneDelegate.swift */; };
 		719DD588252270D7007195C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 719DD586252270D7007195C1 /* Main.storyboard */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		715C602325251537007DDCA5 /* EventListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewModel.swift; sourceTree = "<group>"; };
+		715C602525251625007DDCA5 /* AddEventCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventCoordinator.swift; sourceTree = "<group>"; };
 		719DD57D252270D7007195C1 /* EventsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		719DD580252270D7007195C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		719DD582252270D7007195C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +81,7 @@
 				719DD58E252270DA007195C1 /* Info.plist */,
 				719DD59F252279C3007195C1 /* EventsApp.xcdatamodeld */,
 				719DD5A225227A74007195C1 /* CoreDataManager.swift */,
+				715C602325251537007DDCA5 /* EventListViewModel.swift */,
 			);
 			path = EventsApp;
 			sourceTree = "<group>";
@@ -102,6 +107,7 @@
 			children = (
 				719DD59425227125007195C1 /* AppCoordinator.swift */,
 				719DD596252273D1007195C1 /* EventListCoordinator.swift */,
+				715C602525251625007DDCA5 /* AddEventCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -182,7 +188,9 @@
 				719DD5992522745C007195C1 /* EventListViewController.swift in Sources */,
 				719DD581252270D7007195C1 /* AppDelegate.swift in Sources */,
 				719DD583252270D7007195C1 /* SceneDelegate.swift in Sources */,
+				715C602625251625007DDCA5 /* AddEventCoordinator.swift in Sources */,
 				719DD597252273D1007195C1 /* EventListCoordinator.swift in Sources */,
+				715C602425251537007DDCA5 /* EventListViewModel.swift in Sources */,
 				719DD5A325227A74007195C1 /* CoreDataManager.swift in Sources */,
 				719DD5A1252279C3007195C1 /* EventsApp.xcdatamodeld in Sources */,
 			);
