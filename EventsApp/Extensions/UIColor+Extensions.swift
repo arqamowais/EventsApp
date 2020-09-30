@@ -1,5 +1,5 @@
 //
-//  UIColor+Extension.swift
+//  UIColor+Extensions.swift
 //  EventsApp
 //
 //  Created by Arqam Owais on 29/09/2020.
