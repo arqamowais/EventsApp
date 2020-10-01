@@ -11,11 +11,17 @@ import UIKit
 
 final class TitleSubtitleCell: UITableViewCell {
     
+    private let padding: CGFloat = 15
+    
     private let titleLabel = UILabel()
-    private let subtitleTextField = UITextField()
+    let subtitleTextField = UITextField()
     private let verticalStackView = UIStackView()
     
-    private let padding: CGFloat = 15
+    private let datePickerView = UIDatePicker()
+    private let toolar = UIToolbar(frame: .init(origin: .zero, size: CGSize(width: 100, height: 100)))
+    lazy var doneButton: UIBarButtonItem = {
+        UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(tappedDone))
+    }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -33,6 +39,8 @@ final class TitleSubtitleCell: UITableViewCell {
         titleLabel.text = viewModel.title
         subtitleTextField.text = viewModel.subtitle
         subtitleTextField.placeholder = viewModel.placeholder
+        subtitleTextField.inputView = viewModel.type == .text ? nil : datePickerView
+        subtitleTextField.inputAccessoryView = viewModel.type == .text ? nil : toolar
     }
     
     private func setupViews() {
@@ -43,6 +51,9 @@ final class TitleSubtitleCell: UITableViewCell {
         [verticalStackView, titleLabel, subtitleTextField].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
+        
+        toolar.setItems([doneButton], animated: false)
+        datePickerView.datePickerMode = .date
     }
     
     private func setupHierarchy() {
@@ -58,5 +69,10 @@ final class TitleSubtitleCell: UITableViewCell {
             verticalStackView.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -padding),
             verticalStackView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: padding)
         ])
+    }
+    
+    @objc
+    private func tappedDone() {
+        
     }
 }
