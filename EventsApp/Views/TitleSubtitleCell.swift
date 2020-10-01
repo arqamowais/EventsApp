@@ -23,6 +23,10 @@ final class TitleSubtitleCell: UITableViewCell {
         UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(tappedDone))
     }()
     
+    private let photoImageView = UIImageView()
+    
+    private var viewModel: TitleSubtitleCellViewModel?
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -36,11 +40,18 @@ final class TitleSubtitleCell: UITableViewCell {
     }
     
     func update(with viewModel: TitleSubtitleCellViewModel) {
+        self.viewModel = viewModel
         titleLabel.text = viewModel.title
+        
+        subtitleTextField.isHidden = viewModel.type == .image
         subtitleTextField.text = viewModel.subtitle
         subtitleTextField.placeholder = viewModel.placeholder
         subtitleTextField.inputView = viewModel.type == .text ? nil : datePickerView
         subtitleTextField.inputAccessoryView = viewModel.type == .text ? nil : toolar
+        
+        photoImageView.isHidden = viewModel.type != .image
+        
+        verticalStackView.spacing = viewModel.type == .image ? 15 : verticalStackView.spacing
     }
     
     private func setupViews() {
@@ -54,25 +65,31 @@ final class TitleSubtitleCell: UITableViewCell {
         
         toolar.setItems([doneButton], animated: false)
         datePickerView.datePickerMode = .date
+        
+        photoImageView.backgroundColor = UIColor.black.withAlphaComponent(0.4)
+        photoImageView.layer.cornerRadius = 10
     }
     
     private func setupHierarchy() {
         contentView.addSubview(verticalStackView)
         verticalStackView.addArrangedSubview(titleLabel)
         verticalStackView.addArrangedSubview(subtitleTextField)
+        verticalStackView.addArrangedSubview(photoImageView)
     }
     
     private func setupLayout() {
         NSLayoutConstraint.activate([
             verticalStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding),
-            verticalStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: padding),
+            verticalStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -padding),
             verticalStackView.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -padding),
             verticalStackView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: padding)
         ])
+        
+        photoImageView.heightAnchor.constraint(equalToConstant: 200).isActive = true
     }
     
     @objc
     private func tappedDone() {
-        
+        viewModel?.update(datePickerView.date)
     }
 }
