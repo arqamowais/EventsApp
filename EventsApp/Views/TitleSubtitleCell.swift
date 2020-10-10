@@ -50,6 +50,7 @@ final class TitleSubtitleCell: UITableViewCell {
         subtitleTextField.inputAccessoryView = viewModel.type == .text ? nil : toolar
         
         photoImageView.isHidden = viewModel.type != .image
+        photoImageView.image = viewModel.image
         
         verticalStackView.spacing = viewModel.type == .image ? 15 : verticalStackView.spacing
     }

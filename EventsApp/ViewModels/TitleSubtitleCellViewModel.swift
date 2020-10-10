@@ -6,7 +6,7 @@
 //  Copyright © 2020 Arqam Owais. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 final class TitleSubtitleCellViewModel {
     
@@ -27,6 +27,7 @@ final class TitleSubtitleCellViewModel {
         return dateFormatter
     }()
     
+    private(set) var image: UIImage?
     private(set) var onCellUpdate: () -> Void = {}
     
     init(title: String, subtitle: String, placeholder: String, type: CellType, onCellUpdate: @escaping () -> Void) {
@@ -44,6 +45,11 @@ final class TitleSubtitleCellViewModel {
     func update(_ date: Date) {
         let dateString = dateFormatter.string(from: date)
         self.subtitle = dateString
+        onCellUpdate()
+    }
+    
+    func update(_ image: UIImage) {
+        self.image = image
         onCellUpdate()
     }
     
