@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 final class EventListCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
@@ -33,6 +34,12 @@ final class EventListCoordinator: Coordinator {
         addEventCoordinator.parentCoordinator = self
         childCoordinators.append(addEventCoordinator)
         addEventCoordinator.start()
+    }
+    
+    func onSelect(_ id: NSManagedObjectID) {
+        let eventDetailCoordinator = EventDetailCoordinator(eventID: id, navigationController: navigationController)
+        childCoordinators.append(eventDetailCoordinator)
+        eventDetailCoordinator.start()
     }
     
     func childDidFinish(_ childCoordinator: Coordinator) {

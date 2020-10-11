@@ -67,5 +67,34 @@
             </objects>
             <point key="canvasLocation" x="832" y="110"/>
         </scene>
+        <!--Event Detail View Controller-->
+        <scene sceneID="YO2-xZ-ETy">
+            <objects>
+                <viewController storyboardIdentifier="EventDetailViewController" id="Nib-91-mxB" customClass="EventDetailViewController" customModule="EventsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OJM-db-P2g">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9yG-IP-Bai">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9yG-IP-Bai" firstAttribute="leading" secondItem="OJM-db-P2g" secondAttribute="leading" id="9Ey-wl-WvP"/>
+                            <constraint firstAttribute="trailing" secondItem="9yG-IP-Bai" secondAttribute="trailing" id="OiZ-78-0jR"/>
+                            <constraint firstItem="9yG-IP-Bai" firstAttribute="top" secondItem="OJM-db-P2g" secondAttribute="top" id="V1b-Jf-NUy"/>
+                            <constraint firstAttribute="bottom" secondItem="9yG-IP-Bai" secondAttribute="bottom" id="YCA-R2-Wqt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Rbe-8n-UAC"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="9yG-IP-Bai" id="pMD-M1-5nT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yYN-vi-1Jw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1594" y="98"/>
+        </scene>
     </scenes>
 </document>

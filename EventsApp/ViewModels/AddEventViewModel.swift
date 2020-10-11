@@ -13,7 +13,7 @@ final class AddEventViewModel {
     private(set) var cells: [AddEventViewModel.Cell] = []
 
     let title = "Add"
-    var coordinator: AddEventCoordinator?
+    weak var coordinator: AddEventCoordinator?
     
     enum Cell {
         case titleSubtitle(TitleSubtitleCellViewModel)
@@ -86,7 +86,7 @@ final class AddEventViewModel {
     }
     
     deinit {
-        print("deinit from AddEventViewModel ")
+        print("deinit from AddEventViewModel")
     }
 }
 
