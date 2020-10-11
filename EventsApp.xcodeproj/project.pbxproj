@@ -12,6 +12,7 @@
 		715C602825251DFA007DDCA5 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715C602725251DFA007DDCA5 /* AddEventViewController.swift */; };
 		715C602A25251E7E007DDCA5 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715C602925251E7E007DDCA5 /* UIViewController+Extensions.swift */; };
 		715C602C25251F69007DDCA5 /* AddEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715C602B25251F69007DDCA5 /* AddEventViewModel.swift */; };
+		7191FC8125331737008E7476 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7191FC8025331737008E7476 /* Date+Extensions.swift */; };
 		7198CA5C2531C5C7000414DC /* ImagePickerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7198CA5B2531C5C7000414DC /* ImagePickerCoordinator.swift */; };
 		7198CA5E2531CE9C000414DC /* EventCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7198CA5D2531CE9C000414DC /* EventCellBuilder.swift */; };
 		7198CA602531E301000414DC /* EventCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7198CA5F2531E301000414DC /* EventCellViewModel.swift */; };
@@ -38,6 +39,7 @@
 		715C602725251DFA007DDCA5 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		715C602925251E7E007DDCA5 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		715C602B25251F69007DDCA5 /* AddEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewModel.swift; sourceTree = "<group>"; };
+		7191FC8025331737008E7476 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		7198CA5B2531C5C7000414DC /* ImagePickerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerCoordinator.swift; sourceTree = "<group>"; };
 		7198CA5D2531CE9C000414DC /* EventCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCellBuilder.swift; sourceTree = "<group>"; };
 		7198CA5F2531E301000414DC /* EventCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCellViewModel.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				719DD59A25227782007195C1 /* UIColor+Extensions.swift */,
 				715C602925251E7E007DDCA5 /* UIViewController+Extensions.swift */,
 				7198CA632531E712000414DC /* UIView+Extensions.swift */,
+				7191FC8025331737008E7476 /* Date+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				719DD583252270D7007195C1 /* SceneDelegate.swift in Sources */,
 				7198CA622531E3D9000414DC /* EventCell.swift in Sources */,
 				715C602625251625007DDCA5 /* AddEventCoordinator.swift in Sources */,
+				7191FC8125331737008E7476 /* Date+Extensions.swift in Sources */,
 				719DD597252273D1007195C1 /* EventListCoordinator.swift in Sources */,
 				715C602825251DFA007DDCA5 /* AddEventViewController.swift in Sources */,
 				715C602425251537007DDCA5 /* EventListViewModel.swift in Sources */,
