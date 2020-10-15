@@ -15,6 +15,13 @@ protocol Coordinator: class {
     }
     
     func start()
+    func childDidFinish(_ childCoordinator: Coordinator)
+}
+
+extension Coordinator {
+    func childDidFinish(_ childCoordinator: Coordinator) {
+        
+    }
 }
 
 final class AppCoordinator: Coordinator {

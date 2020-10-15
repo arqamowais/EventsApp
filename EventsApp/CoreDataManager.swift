@@ -50,6 +50,21 @@ final class CoreDataManager {
         }
     }
     
+    public func updateEvent(event: Event, name: String, date: Date, image: UIImage) {
+        event.setValue(name, forKey: "name")
+        event.setValue(date, forKey: "date")
+        
+        let resizedImage = image.sameAspectRatio(newHeight: 250)
+        let imageData = resizedImage.jpegData(compressionQuality: 0.5)
+        event.setValue(imageData, forKey: "image")
+        
+        do {
+            try moc.save()
+        } catch {
+            print(error)
+        }
+    }
+    
     public func fetchEvents() -> [Event] {
         do {
             let fetchRequest = NSFetchRequest<Event>(entityName: "Event")

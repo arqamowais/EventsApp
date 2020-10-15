@@ -42,7 +42,7 @@ final class AddEventCoordinator: Coordinator {
     }
     
     func didFinishSaveEvent() {
-        parentCoordinator?.onSaveEvent()
+        parentCoordinator?.onUpdateEvent()
         navigationController.dismiss(animated: true, completion: nil)
     }
     
@@ -53,13 +53,12 @@ final class AddEventCoordinator: Coordinator {
         self.completion = completion
         let imagePickerCoordinator = ImagePickerCoordinator(navigationController: modalNavigationController)
         imagePickerCoordinator.parentCoordinator = self
+        imagePickerCoordinator.onFinishPicking = { [weak self] image in
+            completion(image)
+            self?.navigationController.dismiss(animated: true, completion: nil)
+        }
         childCoordinators.append(imagePickerCoordinator)
         imagePickerCoordinator.start()
-    }
-    
-    func didFinishPicking(_ image: UIImage) {
-        completion(image)
-        modalNavigationController?.dismiss(animated: true, completion: nil)
     }
     
     func childDidFinish(_ childCoordinator: Coordinator) {

@@ -78,23 +78,59 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9yG-IP-Bai">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="110" placeholderIntrinsicHeight="200" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FdP-0Y-XWC" customClass="TimeRemainingStackView" customModule="EventsApp">
+                                <rect key="frame" x="152" y="348" width="110" height="200"/>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="FdP-0Y-XWC" firstAttribute="centerX" secondItem="9yG-IP-Bai" secondAttribute="centerX" id="89Q-sM-JIN"/>
                             <constraint firstItem="9yG-IP-Bai" firstAttribute="leading" secondItem="OJM-db-P2g" secondAttribute="leading" id="9Ey-wl-WvP"/>
                             <constraint firstAttribute="trailing" secondItem="9yG-IP-Bai" secondAttribute="trailing" id="OiZ-78-0jR"/>
                             <constraint firstItem="9yG-IP-Bai" firstAttribute="top" secondItem="OJM-db-P2g" secondAttribute="top" id="V1b-Jf-NUy"/>
                             <constraint firstAttribute="bottom" secondItem="9yG-IP-Bai" secondAttribute="bottom" id="YCA-R2-Wqt"/>
+                            <constraint firstItem="FdP-0Y-XWC" firstAttribute="centerY" secondItem="9yG-IP-Bai" secondAttribute="centerY" id="qAL-5u-OWy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Rbe-8n-UAC"/>
                     </view>
                     <connections>
-                        <outlet property="backgroundImageView" destination="9yG-IP-Bai" id="pMD-M1-5nT"/>
+                        <outlet property="backgroundImageView" destination="9yG-IP-Bai" id="Nrv-bJ-N8d"/>
+                        <outlet property="timeRemainingStackView" destination="FdP-0Y-XWC" id="sXd-cp-J2f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yYN-vi-1Jw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1594" y="98"/>
+        </scene>
+        <!--Edit Event View Controller-->
+        <scene sceneID="dIt-gm-BhH">
+            <objects>
+                <viewController storyboardIdentifier="EditEventViewController" id="n8M-kZ-8E0" customClass="EditEventViewController" customModule="EventsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s8R-eX-EPg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jGd-GH-iqv">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jGd-GH-iqv" firstAttribute="top" secondItem="GKO-M0-I0D" secondAttribute="top" id="DGP-ZZ-awS"/>
+                            <constraint firstItem="GKO-M0-I0D" firstAttribute="trailing" secondItem="jGd-GH-iqv" secondAttribute="trailing" id="YPd-28-scN"/>
+                            <constraint firstItem="GKO-M0-I0D" firstAttribute="bottom" secondItem="jGd-GH-iqv" secondAttribute="bottom" id="fNU-6c-QPp"/>
+                            <constraint firstItem="jGd-GH-iqv" firstAttribute="leading" secondItem="GKO-M0-I0D" secondAttribute="leading" id="z3B-PJ-zQR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GKO-M0-I0D"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="jGd-GH-iqv" id="Stb-pE-HFQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zt3-Tb-t3Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2364" y="98"/>
         </scene>
     </scenes>
 </document>

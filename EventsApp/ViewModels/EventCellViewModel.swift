@@ -11,14 +11,16 @@ import CoreData
 
 struct EventCellViewModel {
     
-    private static let imageCache = NSCache<NSString, UIImage>()
+    static let imageCache = NSCache<NSString, UIImage>()
     private let date = Date()
     private let imageQueue = DispatchQueue(label: "imageQueue", qos: .background)
-    var onSelect: (NSManagedObjectID) -> Void = { _ in }
-    
+    private var event: Event
+
     private var cacheKey: String {
         event.objectID.description
     }
+    
+    var onSelect: (NSManagedObjectID) -> Void = { _ in }
     
     var timeRemainingStrings: [String] {
         guard let eventDate = event.date else {
@@ -39,8 +41,13 @@ struct EventCellViewModel {
     var eventName: String? {
         event.name
     }
-
-    private var event: Event
+    
+    var timeRemainingViewModel: TimeRemainingViewModel? {
+        guard let eventDate = event.date, let timeRemainingParts = date.timeRemaining(until: eventDate)?.components(separatedBy: ",") else {
+            return nil
+        }
+        return TimeRemainingViewModel(timeRemainingParts: timeRemainingParts, mode: .cell)
+    }
     
     init(_ event: Event) {
         self.event = event
